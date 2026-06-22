@@ -1,10 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { products } from "@/lib/data";
 
-const cartItems = [
+const initialCartItems = [
   {
     product: products[0],
     quantity: 2,
@@ -18,12 +22,32 @@ const cartItems = [
 ];
 
 export default function CartPage() {
+  const router = useRouter();
+  const [cartItems, setCartItems] = useState(initialCartItems);
+
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.product.price * item.quantity,
     0,
   );
   const shipping = subtotal > 999 ? 0 : 49;
-  const total = subtotal + shipping;
+  const gst = Math.round(subtotal * 0.05);
+  const total = subtotal + shipping + gst;
+
+  const updateQuantity = (slug: string, delta: number) => {
+    setCartItems((current) =>
+      current
+        .map((item) =>
+          item.product.slug === slug
+            ? { ...item, quantity: Math.max(0, item.quantity + delta) }
+            : item,
+        )
+        .filter((item) => item.quantity > 0),
+    );
+  };
+
+  const removeItem = (slug: string) => {
+    setCartItems((current) => current.filter((item) => item.product.slug !== slug));
+  };
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -41,11 +65,34 @@ export default function CartPage() {
                     <p className="mt-1 text-sm text-slate-500">Size: {item.selectedSize}</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Button variant="outline" size="icon">-</Button>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      onClick={() => updateQuantity(item.product.slug, -1)}
+                      aria-label={`Decrease quantity for ${item.product.name}`}
+                    >
+                      -
+                    </Button>
                     <span>{item.quantity}</span>
-                    <Button variant="outline" size="icon">+</Button>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      onClick={() => updateQuantity(item.product.slug, 1)}
+                      aria-label={`Increase quantity for ${item.product.name}`}
+                    >
+                      +
+                    </Button>
                   </div>
-                  <p className="text-base font-semibold">₹{item.product.price * item.quantity}</p>
+                  <div className="flex items-center gap-3">
+                    <p className="text-base font-semibold">₹{item.product.price * item.quantity}</p>
+                    <Button
+                      variant="ghost"
+                      className="text-sm text-rose-600"
+                      onClick={() => removeItem(item.product.slug)}
+                    >
+                      Remove
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -57,15 +104,22 @@ export default function CartPage() {
             <div className="mt-4 space-y-3 text-sm text-slate-600">
               <div className="flex justify-between"><span>Subtotal</span><span>₹{subtotal}</span></div>
               <div className="flex justify-between"><span>Shipping</span><span>{shipping === 0 ? "Free" : `₹${shipping}`}</span></div>
-              <div className="flex justify-between"><span>GST</span><span>₹{Math.round(subtotal * 0.05)}</span></div>
+              <div className="flex justify-between"><span>GST</span><span>₹{gst}</span></div>
             </div>
             <div className="mt-4 flex items-center justify-between border-t pt-4 text-base font-semibold">
               <span>Total</span>
-              <span>₹{total + Math.round(subtotal * 0.05)}</span>
+              <span>₹{total}</span>
             </div>
             <input className="mt-6 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm" placeholder="Coupon code" />
-            <Button className="mt-4 w-full bg-emerald-600 hover:bg-emerald-700">Proceed to checkout</Button>
-            <Link href="/products" className="mt-3 block text-center text-sm font-medium text-emerald-700">Continue shopping</Link>
+            <Button
+              className="mt-4 w-full bg-emerald-600 hover:bg-emerald-700"
+              onClick={() => router.push("/checkout")}
+            >
+              Proceed to checkout
+            </Button>
+            <Link href="/products" className="mt-3 block text-center text-sm font-medium text-emerald-700">
+              Continue shopping
+            </Link>
           </CardContent>
         </Card>
       </div>
