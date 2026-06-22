@@ -1,65 +1,153 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ArrowRight, Leaf, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { benefits, products, subscriptionPlans, testimonials } from "@/lib/data";
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="bg-[linear-gradient(180deg,#f7fff8_0%,#ffffff_30%,#f7fbf8_100%)]">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#d9fce5_0%,transparent_28%)]" />
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-24">
+          <div className="flex flex-col justify-center">
+            <span className="mb-4 inline-flex w-fit rounded-full bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-700">Fresh Microgreens, Pure Nutrition</span>
+            <h1 className="text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl">
+              Grow your wellness with <span className="text-emerald-600">GreenSprout Naturals</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+              Premium, farm-fresh microgreens and nutrient-dense powders crafted for health-conscious families, cafes, and fitness lovers.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link href="/products">
+                <Button className="bg-emerald-600 hover:bg-emerald-700">
+                  Shop Microgreens <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/subscriptions">
+                <Button className="border border-emerald-200 bg-white text-emerald-700 hover:bg-emerald-50">
+                  Explore Plans
+                </Button>
+              </Link>
+            </div>
+            <div className="mt-10 flex items-center gap-6">
+              <div>
+                <p className="text-3xl font-semibold text-slate-900">10K+</p>
+                <p className="text-sm text-slate-500">happy customers</p>
+              </div>
+              <div>
+                <p className="text-3xl font-semibold text-slate-900">4.9/5</p>
+                <p className="text-sm text-slate-500">average rating</p>
+              </div>
+            </div>
+          </div>
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="relative">
+            <div className="absolute -right-6 top-10 h-48 w-48 rounded-full bg-emerald-200/40 blur-3xl" />
+            <Card className="overflow-hidden p-3">
+              <Image src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1100&q=80" alt="Fresh microgreens" width={900} height={900} className="h-[560px] w-full rounded-2xl object-cover" />
+            </Card>
+          </motion.div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-6 md:grid-cols-3">
+          {benefits.map((benefit) => (
+            <Card key={benefit}>
+              <CardContent>
+                <div className="flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-700">
+                    <Leaf className="h-5 w-5" />
+                  </div>
+                  <p className="font-medium text-slate-800">{benefit}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="flex items-end justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-600">Featured Products</p>
+            <h2 className="mt-2 text-3xl font-semibold text-slate-900">Popular picks for everyday nutrition</h2>
+          </div>
+          <Link href="/products" className="text-sm font-semibold text-emerald-700">View all</Link>
+        </div>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {products.slice(0, 3).map((product) => (
+            <Card key={product.id} className="overflow-hidden">
+              <Image src={product.image} alt={product.name} width={600} height={400} className="h-64 w-full object-cover" />
+              <CardContent>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-emerald-600">{product.category}</p>
+                    <h3 className="mt-1 text-xl font-semibold">{product.name}</h3>
+                  </div>
+                  {product.badge && <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs text-emerald-700">{product.badge}</span>}
+                </div>
+                <p className="mt-3 text-sm text-slate-600">{product.description}</p>
+                <div className="mt-4 flex items-center justify-between">
+                  <p className="text-xl font-semibold text-slate-900">₹{product.price}</p>
+                  <Link href={`/products/${product.slug}`}><Button className="bg-slate-900 hover:bg-slate-800">Buy now</Button></Link>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="rounded-3xl bg-slate-950 px-8 py-12 text-white">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald-300">Founder Spotlight</p>
+            <h2 className="mt-3 text-3xl font-semibold">Duddela Poornima</h2>
+            <p className="mt-4 text-slate-300">Founder of GreenSprout Naturals, committed to bringing clean, nutrient-rich microgreens to homes and businesses across India.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-6 lg:grid-cols-3">
+          {testimonials.map((item) => (
+            <Card key={item.name}>
+              <CardContent>
+                <div className="flex items-center gap-1 text-emerald-500">
+                  {Array.from({ length: 5 }).map((_, index) => (<Star key={index} className="h-4 w-4 fill-current" />))}
+                </div>
+                <p className="mt-4 text-slate-700">“{item.quote}”</p>
+                <p className="mt-4 font-semibold text-slate-900">{item.name}</p>
+                <p className="text-sm text-slate-500">{item.role}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-6 md:grid-cols-3">
+          {subscriptionPlans.map((plan) => (
+            <Card key={plan.name} className={plan.name === "Premium Health Plan" ? "border-emerald-500" : ""}>
+              <CardContent>
+                <p className="text-sm font-semibold text-emerald-600">{plan.name}</p>
+                <p className="mt-2 text-4xl font-semibold">₹{plan.price}</p>
+                <p className="mt-2 text-sm text-slate-500">per month</p>
+                <p className="mt-4 text-sm text-slate-600">{plan.description}</p>
+                <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                  {plan.perks.map((perk) => (<li key={perk}>• {perk}</li>))}
+                </ul>
+                <Button className="mt-6 w-full bg-emerald-600 hover:bg-emerald-700">Subscribe now</Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
+
