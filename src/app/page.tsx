@@ -109,13 +109,13 @@ export default function HomePage() {
             <h2 className="mt-3 text-3xl font-semibold">Duddela Poornima</h2>
             <p className="mt-4 text-slate-300">Founder of Seven Hills Little Leaves, committed to bringing clean, nutrient-rich microgreens to homes and businesses across India.</p>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-white/15">
+          <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-white/15 bg-white/5 p-2">
             <Image
               src="/images/brand/founder.jpeg"
               alt="Founder Duddela Poornima"
               width={640}
               height={640}
-              className="h-full w-full object-cover"
+              className="h-full w-full rounded-xl object-contain object-top"
             />
           </div>
         </div>

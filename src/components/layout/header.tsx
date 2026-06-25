@@ -11,9 +11,9 @@ export function Header() {
           <Image
             src="/images/brand/logo.jpeg"
             alt="Seven Hills Little Leaves logo"
-            width={44}
-            height={44}
-            className="h-11 w-11 rounded-2xl object-cover"
+            width={240}
+            height={120}
+            className="h-11 w-auto max-w-[130px] object-contain sm:h-12 sm:max-w-[150px]"
           />
           <div>
             <p className="text-lg font-semibold text-slate-900">Seven Hills Little Leaves</p>

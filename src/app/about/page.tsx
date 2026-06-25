@@ -19,7 +19,7 @@ export default function AboutPage() {
               alt="Founder Duddela Poornima"
               width={640}
               height={640}
-              className="mt-6 h-72 w-full rounded-2xl object-cover"
+              className="mt-6 w-full rounded-2xl border border-slate-200 bg-slate-50 p-2 object-contain"
             />
           </CardContent>
         </Card>
