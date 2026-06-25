@@ -10,7 +10,7 @@ export default function ContactPage() {
           <h1 className="mt-2 text-4xl font-semibold text-slate-900">Let’s grow something healthy together</h1>
           <p className="mt-5 text-slate-600">Reach out for bulk orders, subscriptions, partnerships, or custom nutrition support.</p>
           <ul className="mt-6 space-y-2 text-sm text-slate-600">
-            <li>Email: support@greensprout.in</li>
+            <li>Email: support@sevenhillslittleleaves.in</li>
             <li>WhatsApp: +91 98765 43210</li>
             <li>Location: India</li>
           </ul>

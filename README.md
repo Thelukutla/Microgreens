@@ -1,4 +1,4 @@
-# GreenSprout Naturals
+# Seven Hills Little Leaves
 
 A production-ready eCommerce storefront for a premium microgreens business built with Next.js, TypeScript, Tailwind, Prisma, and PostgreSQL.
 

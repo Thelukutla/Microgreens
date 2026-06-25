@@ -17,7 +17,7 @@ export default function HomePage() {
           <div className="flex flex-col justify-center">
             <span className="mb-4 inline-flex w-fit rounded-full bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-700">Fresh Microgreens, Pure Nutrition</span>
             <h1 className="text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl">
-              Grow your wellness with <span className="text-emerald-600">GreenSprout Naturals</span>
+              Grow your wellness with <span className="text-emerald-600">Seven Hills Little Leaves</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
               Premium, farm-fresh microgreens and nutrient-dense powders crafted for health-conscious families, cafes, and fitness lovers.
@@ -103,11 +103,20 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-slate-950 px-8 py-12 text-white">
+        <div className="grid gap-8 rounded-3xl bg-slate-950 px-8 py-12 text-white lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.3em] text-emerald-300">Founder Spotlight</p>
             <h2 className="mt-3 text-3xl font-semibold">Duddela Poornima</h2>
-            <p className="mt-4 text-slate-300">Founder of GreenSprout Naturals, committed to bringing clean, nutrient-rich microgreens to homes and businesses across India.</p>
+            <p className="mt-4 text-slate-300">Founder of Seven Hills Little Leaves, committed to bringing clean, nutrient-rich microgreens to homes and businesses across India.</p>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-white/15">
+            <Image
+              src="/images/brand/founder.jpeg"
+              alt="Founder Duddela Poornima"
+              width={640}
+              height={640}
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </section>

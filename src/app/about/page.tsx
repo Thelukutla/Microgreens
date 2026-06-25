@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function AboutPage() {
@@ -7,12 +8,19 @@ export default function AboutPage() {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-600">Our Story</p>
           <h1 className="mt-3 text-4xl font-semibold text-slate-900">A founder-led mission to bring fresh nutrition home</h1>
-          <p className="mt-5 text-lg text-slate-600">Duddela Poornima founded GreenSprout Naturals with a simple goal: make premium microgreens accessible for every Indian household, restaurant, and wellness enthusiast.</p>
+          <p className="mt-5 text-lg text-slate-600">Duddela Poornima founded Seven Hills Little Leaves with a simple goal: make premium microgreens accessible for every Indian household, restaurant, and wellness enthusiast.</p>
         </div>
         <Card>
           <CardContent>
             <h3 className="text-2xl font-semibold">Founder</h3>
             <p className="mt-3 text-slate-600">Duddela Poornima believes food should be both delicious and deeply nourishing. Every harvest is carefully grown to preserve flavor, texture, and nutrients.</p>
+            <Image
+              src="/images/brand/founder.jpeg"
+              alt="Founder Duddela Poornima"
+              width={640}
+              height={640}
+              className="mt-6 h-72 w-full rounded-2xl object-cover"
+            />
           </CardContent>
         </Card>
       </section>

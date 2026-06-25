@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://greensprout.in/sitemap.xml",
+    sitemap: "https://sevenhillslittleleaves.in/sitemap.xml",
   };
 }

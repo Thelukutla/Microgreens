@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ShoppingBag, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -7,9 +8,15 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-emerald-100 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600 text-white">GS</div>
+          <Image
+            src="/images/brand/logo.jpeg"
+            alt="Seven Hills Little Leaves logo"
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-2xl object-cover"
+          />
           <div>
-            <p className="text-lg font-semibold text-slate-900">GreenSprout Naturals</p>
+            <p className="text-lg font-semibold text-slate-900">Seven Hills Little Leaves</p>
             <p className="text-xs text-slate-500">Fresh Microgreens</p>
           </div>
         </Link>

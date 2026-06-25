@@ -1,6 +1,6 @@
 export async function GET() {
   return Response.json({
     status: "ok",
-    message: "GreenSprout API is running",
+    message: "Seven Hills Little Leaves API is running",
   });
 }

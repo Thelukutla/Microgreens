@@ -9,18 +9,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "GreenSprout Naturals | Fresh Microgreens & Powders",
-    template: "%s | GreenSprout Naturals",
+    default: "Seven Hills Little Leaves | Fresh Microgreens & Powders",
+    template: "%s | Seven Hills Little Leaves",
   },
   description:
-    "GreenSprout Naturals offers premium fresh microgreens, powders, and subscription plans across India.",
+    "Seven Hills Little Leaves offers premium fresh microgreens, powders, and subscription plans across India.",
   keywords: [
     "microgreens",
     "organic food",
     "nutrition",
     "wellness",
     "microgreens powder",
-    "GreenSprout Naturals",
+    "Seven Hills Little Leaves",
   ],
 };
 
