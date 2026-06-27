@@ -1,8 +1,8 @@
-const { PrismaClient } = require('@prisma/client');
-
-const prisma = new PrismaClient();
-
 async function main() {
+  const { PrismaClient } = await import('@prisma/client');
+  const prisma = new PrismaClient();
+
+  try {
   const categories = [
     { name: 'Fresh Microgreens', slug: 'fresh-microgreens' },
     { name: 'Microgreens Powder', slug: 'microgreens-powder' },
@@ -83,13 +83,13 @@ async function main() {
   }
 
   console.log('Seed data created successfully.');
+  } finally {
+    await prisma.$disconnect();
+  }
 }
 
 main()
   .catch((e) => {
     console.error(e);
     process.exit(1);
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
   });

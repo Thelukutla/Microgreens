@@ -23,6 +23,7 @@ export function Header() {
         <nav className="hidden items-center gap-6 md:flex">
           <Link href="/about" className="text-sm text-slate-600 hover:text-emerald-700">About</Link>
           <Link href="/products" className="text-sm text-slate-600 hover:text-emerald-700">Products</Link>
+          <Link href="/health-benefits" className="text-sm text-slate-600 hover:text-emerald-700">Health Benefits</Link>
           <Link href="/blog" className="text-sm text-slate-600 hover:text-emerald-700">Blog</Link>
           <Link href="/contact" className="text-sm text-slate-600 hover:text-emerald-700">Contact</Link>
         </nav>
@@ -33,11 +34,11 @@ export function Header() {
           <Button variant="ghost" size="icon" className="hidden sm:inline-flex">
             <User className="h-4 w-4" />
           </Button>
-          <Link href="/cart">
-            <Button className="bg-emerald-600 hover:bg-emerald-700">
+          <Button asChild className="bg-emerald-600 hover:bg-emerald-700">
+            <Link href="/cart">
               <ShoppingBag className="mr-2 h-4 w-4" /> Cart
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </div>
     </header>
