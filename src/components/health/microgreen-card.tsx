@@ -8,6 +8,85 @@ import { BenefitBadge } from "@/components/health/benefit-badge";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Microgreen } from "@/lib/health-data";
 
+function getUsageIcon(usage: string) {
+  const normalized = usage.toLowerCase();
+
+  if (normalized.includes("salad") || normalized.includes("bowl")) {
+    return { symbol: "🥗", label: "Salad bowl" };
+  }
+
+  if (
+    normalized.includes("sandwich") ||
+    normalized.includes("wrap") ||
+    normalized.includes("burger") ||
+    normalized.includes("taco") ||
+    normalized.includes("bruschetta") ||
+    normalized.includes("chapati") ||
+    normalized.includes("bread")
+  ) {
+    return { symbol: "🥪", label: "Sandwich and wraps" };
+  }
+
+  if (
+    normalized.includes("smoothie") ||
+    normalized.includes("yogurt") ||
+    normalized.includes("juice")
+  ) {
+    return { symbol: "🥤", label: "Drink or bowl" };
+  }
+
+  if (
+    normalized.includes("soup") ||
+    normalized.includes("dal") ||
+    normalized.includes("curry") ||
+    normalized.includes("raita")
+  ) {
+    return { symbol: "🍲", label: "Soup and curry" };
+  }
+
+  if (normalized.includes("pizza")) {
+    return { symbol: "🍕", label: "Pizza" };
+  }
+
+  if (
+    normalized.includes("pasta") ||
+    normalized.includes("noodle") ||
+    normalized.includes("pesto")
+  ) {
+    return { symbol: "🍝", label: "Pasta and noodles" };
+  }
+
+  if (
+    normalized.includes("omelette") ||
+    normalized.includes("scrambled") ||
+    normalized.includes("egg")
+  ) {
+    return { symbol: "🍳", label: "Egg dish" };
+  }
+
+  if (
+    normalized.includes("sushi") ||
+    normalized.includes("dumpling") ||
+    normalized.includes("spring roll")
+  ) {
+    return { symbol: "🍣", label: "Asian bites" };
+  }
+
+  if (normalized.includes("rice")) {
+    return { symbol: "🍚", label: "Rice dish" };
+  }
+
+  if (normalized.includes("toast")) {
+    return { symbol: "🍞", label: "Toast" };
+  }
+
+  if (normalized.includes("stir-fr") || normalized.includes("fried")) {
+    return { symbol: "🍛", label: "Stir-fry" };
+  }
+
+  return { symbol: "🍽️", label: "Meal" };
+}
+
 export function MicrogreenCard({ item }: { item: Microgreen }) {
   const reduceMotion = useReducedMotion();
 
@@ -71,6 +150,26 @@ export function MicrogreenCard({ item }: { item: Microgreen }) {
               {item.healthBenefits.map((benefit) => (
                 <li key={benefit}>- {benefit}</li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="mb-2 text-sm font-semibold text-slate-700 dark:text-slate-200">How to Use</p>
+            <ul className="flex flex-wrap gap-2" aria-label={`How to use ${item.name}`}>
+              {item.howToUse.map((usage) => {
+                const icon = getUsageIcon(usage);
+
+                return (
+                  <li key={usage}>
+                    <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50/80 px-3 py-1.5 text-xs font-medium text-emerald-900 dark:border-emerald-700/50 dark:bg-emerald-950/40 dark:text-emerald-100">
+                      <span role="img" aria-label={icon.label} className="leading-none">
+                        {icon.symbol}
+                      </span>
+                      {usage}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
