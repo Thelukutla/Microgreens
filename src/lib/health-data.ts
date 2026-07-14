@@ -9,7 +9,9 @@ export type HealthFilter =
   | "Immunity"
   | "Blood Pressure"
   | "Bone Health"
-  | "Protein";
+  | "Protein"
+  | "Iron"
+  | "Calcium";
 
 export interface ImageAttribution {
   source: "Unsplash" | "Pexels";
@@ -56,6 +58,8 @@ export const healthFilters: HealthFilter[] = [
   "Blood Pressure",
   "Bone Health",
   "Protein",
+  "Iron",
+  "Calcium",
 ];
 
 export const microgreens: Microgreen[] = [
