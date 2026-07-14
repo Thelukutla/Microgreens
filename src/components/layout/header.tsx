@@ -10,13 +10,13 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/brand/logo.jpeg"
-            alt="Seven Hills Little Leaves logo"
+            alt="Seven Hills Microgreens logo"
             width={240}
             height={120}
             className="h-11 w-auto max-w-[130px] object-contain sm:h-12 sm:max-w-[150px]"
           />
           <div>
-            <p className="text-lg font-semibold text-slate-900">Seven Hills Little Leaves</p>
+            <p className="text-lg font-semibold text-slate-900">Seven Hills Microgreens</p>
             <p className="text-xs text-slate-500">Fresh Microgreens</p>
           </div>
         </Link>

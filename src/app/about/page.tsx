@@ -8,7 +8,7 @@ export default function AboutPage() {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-600">Our Story</p>
           <h1 className="mt-3 text-4xl font-semibold text-slate-900">A founder-led mission to bring fresh nutrition home</h1>
-          <p className="mt-5 text-lg text-slate-600">Duddela Poornima founded Seven Hills Little Leaves with a simple goal: make premium microgreens accessible for every Indian household, restaurant, and wellness enthusiast.</p>
+          <p className="mt-5 text-lg text-slate-600">Duddela Poornima founded Seven Hills Microgreens with a simple goal: make premium microgreens accessible for every Indian household, restaurant, and wellness enthusiast.</p>
         </div>
         <Card>
           <CardContent>

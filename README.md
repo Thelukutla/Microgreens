@@ -1,4 +1,4 @@
-# Seven Hills Little Leaves
+# Seven Hills Microgreens
 
 A production-ready eCommerce storefront for a premium microgreens business built with Next.js, TypeScript, Tailwind, Prisma, and PostgreSQL.
 
