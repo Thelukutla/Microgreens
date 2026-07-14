@@ -153,7 +153,7 @@ export function HealthBenefitsClient() {
                 </div>
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div className="rounded-2xl border border-emerald-100 bg-white/80 p-3 dark:border-slate-700 dark:bg-slate-800/80">
-                    <p className="text-2xl font-bold text-slate-900 dark:text-white">11</p>
+                    <p className="text-2xl font-bold text-slate-900 dark:text-white">{microgreens.length}</p>
                     <p className="text-slate-600 dark:text-slate-300">Microgreens covered</p>
                   </div>
                   <div className="rounded-2xl border border-emerald-100 bg-white/80 p-3 dark:border-slate-700 dark:bg-slate-800/80">

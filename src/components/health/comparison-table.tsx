@@ -51,6 +51,10 @@ export function ComparisonTable({
           <ComparisonRow label="Taste" left={left.taste} right={right.taste} />
           <ComparisonRow label="Daily Quantity" left={left.recommendedDailyQuantity} right={right.recommendedDailyQuantity} />
           <ComparisonRow label="Best For" left={left.bestFor.join(", ")} right={right.bestFor.join(", ")} />
+          <ComparisonRow label="Protein" left={(left.nutrients || []).includes("Protein") ? "Yes" : "No"} right={(right.nutrients || []).includes("Protein") ? "Yes" : "No"} />
+          <ComparisonRow label="Fiber" left={(left.nutrients || []).includes("Fiber") ? "Yes" : "No"} right={(right.nutrients || []).includes("Fiber") ? "Yes" : "No"} />
+          <ComparisonRow label="Calcium" left={(left.nutrients || []).includes("Calcium") ? "Yes" : "No"} right={(right.nutrients || []).includes("Calcium") ? "Yes" : "No"} />
+          <ComparisonRow label="Iron" left={(left.nutrients || []).includes("Iron") ? "Yes" : "No"} right={(right.nutrients || []).includes("Iron") ? "Yes" : "No"} />
         </tbody>
       </table>
     </div>
