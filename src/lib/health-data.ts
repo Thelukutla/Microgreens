@@ -67,7 +67,7 @@ export const microgreens: Microgreen[] = [
     id: "broccoli",
     name: "Broccoli Microgreens",
     image:
-      "https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1647613233075-e0d5546b0f22?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Fresh broccoli microgreens in a bright bowl",
     keyCompound: "Sulforaphane",
     scientificHighlights: [
@@ -111,7 +111,7 @@ export const microgreens: Microgreen[] = [
     id: "red-cabbage",
     name: "Red Cabbage Microgreens",
     image:
-      "https://images.unsplash.com/photo-1518843875459-f738682238a6?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1647613233077-c323b019968b?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Purple red cabbage microgreens with water droplets",
     scientificHighlights: [
       "Rich in Vitamin C and Vitamin E",
@@ -153,7 +153,7 @@ export const microgreens: Microgreen[] = [
     id: "radish",
     name: "Radish Microgreens",
     image:
-      "https://images.unsplash.com/photo-1566843972142-a7fcb70de55a?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1647613233056-fc9918256a8d?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Fresh radish microgreens with pink stems",
     scientificHighlights: [
       "Rich in Vitamin B6, folate, and manganese",
@@ -194,7 +194,7 @@ export const microgreens: Microgreen[] = [
     id: "pak-choi",
     name: "Pak Choi Microgreens",
     image:
-      "https://images.unsplash.com/photo-1457296898342-cdd24585d095?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1593850684282-82029c1ac6be?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Pak choi microgreens in a tray",
     scientificHighlights: [
       "High glucosinolate content",
@@ -235,7 +235,7 @@ export const microgreens: Microgreen[] = [
     id: "spinach",
     name: "Spinach Microgreens",
     image:
-      "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1647613233046-ccf59207335d?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Bright green spinach microgreens",
     scientificHighlights: [
       "Contains lutein and zeaxanthin",
@@ -276,7 +276,7 @@ export const microgreens: Microgreen[] = [
     id: "cilantro",
     name: "Cilantro Microgreens",
     image:
-      "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1648128774202-13a404952071?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Fresh cilantro microgreens close-up",
     scientificHighlights: [
       "Rich in Vitamin A and Vitamin C",
@@ -317,7 +317,7 @@ export const microgreens: Microgreen[] = [
     id: "basil",
     name: "Basil Microgreens",
     image:
-      "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1647613233044-bb52d86f778d?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Fresh basil microgreens in natural light",
     scientificHighlights: [
       "Contains polyphenols",
@@ -358,7 +358,7 @@ export const microgreens: Microgreen[] = [
     id: "fenugreek",
     name: "Fenugreek Microgreens",
     image:
-      "https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1640671511581-0cc93ea3ebf2?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Fenugreek microgreens in small pots",
     scientificHighlights: [
       "Supports glucose metabolism",
@@ -399,7 +399,7 @@ export const microgreens: Microgreen[] = [
     id: "pea-shoot",
     name: "Pea Shoot Microgreens",
     image:
-      "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1535734668010-da0c7d3085f2?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Tender pea shoots piled fresh",
     scientificHighlights: [
       "High plant protein and fiber",
@@ -440,7 +440,7 @@ export const microgreens: Microgreen[] = [
     id: "beetroot",
     name: "Beetroot Microgreens",
     image:
-      "https://images.unsplash.com/photo-1518843875459-f738682238a6?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1593850685398-e79bab596d1d?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Beetroot microgreens with deep red stems",
     scientificHighlights: [
       "Natural nitrate source",
@@ -481,7 +481,7 @@ export const microgreens: Microgreen[] = [
     id: "corn",
     name: "Corn Microgreens",
     image:
-      "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1653654630422-c9dd3a2ca659?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Corn microgreens with yellow-green shoots",
     scientificHighlights: [
       "Contains antioxidants",
@@ -524,7 +524,7 @@ export const microgreens: Microgreen[] = [
     scientificName: "Vigna radiata",
     tagline: "Nutritious sprout for daily energy",
     image:
-      "https://images.unsplash.com/photo-1518972559570-6f5f0f40b5d8?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1633133451255-5e7b18ba768a?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Green gram microgreens fresh in a bowl",
     keyCompound: "Vit B complex, Saponins",
     scientificHighlights: [
@@ -572,7 +572,7 @@ export const microgreens: Microgreen[] = [
     scientificName: "Macrotyloma uniflorum",
     tagline: "Robust legume microgreen rich in minerals",
     image:
-      "https://images.unsplash.com/photo-1548946526-f69e2424cf45?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1736697624075-3c636a1c0289?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Horse gram microgreens in a wooden bowl",
     keyCompound: "Polyphenols, Iron",
     scientificHighlights: [
@@ -609,7 +609,7 @@ export const microgreens: Microgreen[] = [
     scientificName: "Vigna mungo",
     tagline: "Small shoots, concentrated plant protein",
     image:
-      "https://images.unsplash.com/photo-1604908177303-1b7a4f3f2b0c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1620745883843-bfb63c7cbe78?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Black gram microgreens close-up",
     keyCompound: "Plant protein, polyphenols",
     scientificHighlights: ["High protein density", "Contains plant-based iron and antioxidants"],
@@ -643,7 +643,7 @@ export const microgreens: Microgreen[] = [
     scientificName: "Triticum aestivum",
     tagline: "Chlorophyll-rich green concentrated in a shot",
     image:
-      "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1653076446136-705337f5d2a1?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Fresh wheatgrass blades in a tray",
     keyCompound: "Chlorophyll, vitamins A & C",
     scientificHighlights: [
@@ -681,7 +681,7 @@ export const microgreens: Microgreen[] = [
     scientificName: "Cicer arietinum",
     tagline: "Creamy, protein-rich sprouts",
     image:
-      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1647613233075-e0d5546b0f22?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Chickpea microgreens ready to eat",
     keyCompound: "Protein, resistant starch",
     scientificHighlights: ["Good plant protein source", "Contains resistant starch for gut health"],
@@ -715,7 +715,7 @@ export const microgreens: Microgreen[] = [
     scientificName: "Pisum sativum",
     tagline: "Sweet, crunchy shoots rich in protein",
     image:
-      "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1647613233077-c323b019968b?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Tender green pea shoots piled fresh",
     keyCompound: "Protein, fiber",
     scientificHighlights: ["High in plant protein", "Good source of fiber and iron"],
